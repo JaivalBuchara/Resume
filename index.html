@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume-Jaival</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+        <!-- Header starts here -->
+        <div id="header">
+            <!-- Its the space before the image -->
+            <div id="space"></div>
+            <!-- Image of Jaival-->
+            <div id="imageborder">
+                <img src="images/Jaival.png" alt="Jaival's Photo" id = "image">
+            </div>
+            <!-- Name and job title -->
+            <div id="disc">
+                <h2>Jaival Buchara</h2>
+                <h4>Front-End Developer</h4>
+                <p>
+                    I am a committed and enthusiastic individual who has built a solid foundation in Computer Science and possesses a strong passion for solving problems. Currently, I am pursuing my bachelor's degree at Vellore Institute of Technology in Vellore, where I have had the opportunity to refine my skills in Data Structures, Algorithms, and Object-Oriented Programming. Throughout my academic journey, I have gained expertise in programming languages such as C, C++, Python, and Java. I thrive on taking on intricate challenges and pride myself on my communication skills, which enable me to collaborate effectively within team environments. 
+                </p>
+            </div>
+            <!-- SNS -->
+            <div id="links">
+                <a href="http://example.com">
+                    <img src="images/github.png" alt="github_icon" class = "icon">
+                    <span>Github</span>
+                </a>
+                <a href="http://example.com">
+                    <img src="images/linkdin.png" alt="linkdin_icon" class = "icon">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="http://example.com">
+                    <img src="images/leetcode.png" alt=leetcode_icon" class = "icon">
+                    <span>LeetCode</span>
+                </a>
+                <div class = "copy">
+
+                    <a href="tel:+917357313689" >
+                        <img src="images/cell.png" alt=leetcode_icon" class = "icon">
+                        <span class="copyable">+91 7357313689</span>
+                    </a>
+                </div>
+                <button class="copy-button">Copy</button>
+                <div class = "copy">
+
+                    <a href="mailto:jaivalbuchara20@gmail.com" >
+                        <img src="images/email.png" alt="email_icon" class = "icon">
+                        <span class="copyable">jaivalbuchara20@gmail.com</span>
+                    </a>
+                </div>
+                <button class="copy-button">Copy</button>
+                <!-- JS to copy -->
+                <script>
+                    // Get all elements with class "copy-button"
+                    const copyButtons = document.querySelectorAll(".copy-button");
+            
+                    copyButtons.forEach((button) => {
+                        button.addEventListener("click", () => {
+                            // Find the adjacent .copyable element and copy its content
+                            const copyableElement = button.previousElementSibling;
+                            const textToCopy = copyableElement.textContent;
+                            const textArea = document.createElement("textarea");
+                            textArea.value = textToCopy;
+                            document.body.appendChild(textArea);
+                            textArea.select();
+                            
+                            // Copy the text to the clipboard
+                            document.execCommand("copy");
+                            
+                            // Clean up
+                            document.body.removeChild(textArea);
+                            
+                            // Provide visual feedback
+                            button.textContent = "Copied!";
+                            setTimeout(() => {
+                                button.textContent = "Copy";
+                            }, 2000); // Reset the button text after 2 seconds
+                        });
+                    });
+                </script>
+                
+            </div>
+        </div>
+</body>
+</html>
