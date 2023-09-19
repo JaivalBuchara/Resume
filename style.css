@@ -40,6 +40,7 @@
     width: 8rem;
     border-radius: 10%;
 }
+
 /* Name and Desc */
 #disc{
     color: #1d3243;
@@ -49,6 +50,7 @@
 }
 #disc h2{
     font-size: xx-large;
+    color:#1d3243;
 }
 #disc h4{
     font-size: large;
@@ -112,12 +114,19 @@
     height: 100%;
     background-color: antiquewhite;
 }
+
+#content h2{
+    color: #1d3243;
+    text-decoration: underline;
+}
+
 .contentbox{
     display: block;
     padding: 0.2rem;
     margin-inline-start: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    
 }
 
 .leftdiv{
@@ -125,15 +134,18 @@
     width: 50%;
     float:left;
 }
+
 #edu a{
     font-size: medium;
     color: blue;
     text-decoration: none;
 }
+
 .grtype{
     font-weight: bold;
     font-size: larger;
 }
+
 .grade{
     border: 0.1rem solid black;
     margin-top: 1rem;
@@ -144,6 +156,7 @@
     font-weight: bold;
     color:darkblue;
 }
+
 .grade:hover{
     opacity: 0.5;
     background-color: aliceblue;
@@ -157,11 +170,50 @@
 
 .line{
     border:none;
-    border-top: .05rem dashed black ;
-    width: 70%;
+    width: 95%;
+    border-top: .1rem dashed black ;
+    
 }
 
 .break{
+    margin-inline-start: 2rem;
     border:none;
-    border-top: .05rem solid black ;
+    border-top: .13rem solid black ;
+}
+
+#skills{
+    /* margin: 1rem; */
+    /* display: flex; */
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rgrade{
+    border: 0.1rem solid black;
+    margin: 1rem;
+    height: 1.5rem;
+    width: 4rem;
+    opacity: 1;
+    font-size: medium;
+    font-weight: bold;
+    color:darkblue;
+}
+
+.rgrade:hover{
+    opacity: 0.5;
+    background-color: aliceblue;
+    cursor: text;
+}
+
+#sql{
+    height: 1.5rem;
+    width: 6rem;
+}
+
+#vhdl{
+    width: 22rem;
+}
+
+#cpt{
+    width: 12rem;
 }
