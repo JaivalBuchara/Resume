@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: #ebebeb;
+}
 /* Header of the page */
 #header{
     display: flex;
@@ -63,6 +66,7 @@
     height: 100%;
     align-self: flex-end;
     background-color: #1d3243;
+    min-width: 30%;
 }
 
 #links a{
@@ -112,12 +116,17 @@
     flex-direction: row;
     align-items: stretch;
     height: 100%;
-    background-color: antiquewhite;
+    background-color: #ebebeb;
+    width: 100%;
 }
 
 #content h2{
     color: #1d3243;
     text-decoration: underline;
+}
+
+#summary p{
+    width: 93%;
 }
 
 .contentbox{
@@ -126,12 +135,14 @@
     margin-inline-start: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    
+    height: 100%;
 }
-
+#edu{
+    height: 27rem;
+}
 .leftdiv{
     align-self: flex-start;
-    width: 50%;
+    width: 70%;
     float:left;
 }
 
@@ -163,9 +174,14 @@
     cursor: text;
 }
 
+.rightdivmain{
+    float:right;
+    width: 30%;
+    background-color: #1d3243;
+}
 .rightdiv{
     float:right;
-    width: 50%;
+    width: 30%;
 }
 
 .line{
@@ -177,15 +193,24 @@
 
 .break{
     margin-inline-start: 2rem;
+    margin-inline-end: 0.4rem;
     border:none;
     border-top: .13rem solid black ;
 }
 
-#skills{
-    /* margin: 1rem; */
-    /* display: flex; */
-    flex-direction: row;
-    flex-wrap: wrap;
+#skills h2{
+    color:aliceblue;
+    text-decoration: underline;
+}
+#skills h3{
+    color:aliceblue;
+    
+}
+#skills .line{
+    border:none;
+    width: 95%;
+    border-top: .1rem dashed #eacc8b ;
+    
 }
 
 .rgrade{
@@ -216,4 +241,40 @@
 
 #cpt{
     width: 12rem;
+}
+
+@media screen and (max-width: 1379px) {
+    /* Style the button to display only the first three letters */
+    #vhdl{
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden;
+        width: 4rem;
+        text-overflow: ellipsis; /* Display an ellipsis (...) to indicate hidden text */
+    }
+
+    /* Display full text when button is hovered */
+    #vhdl:hover {
+        overflow: visible;
+        width: 6rem;
+        white-space: normal; /* Allow text to wrap */
+        text-overflow: initial;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #cpt,#sql{
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden;
+        width: 4rem;
+        text-overflow: ellipsis; /* Display an ellipsis (...) to indicate hidden text */
+    }
+    #cpt:hover,#sql:hover {
+        overflow: visible;
+        width: 6rem;
+        white-space: normal; /* Allow text to wrap */
+        text-overflow: initial;
+        height: max-content;
+    }
+
 }
